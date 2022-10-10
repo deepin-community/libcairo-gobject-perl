@@ -1,0 +1,125 @@
+libcairo-gobject-perl (1.005-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ gregor herrmann ]
+  * debian/control: update Build-Depends for cross builds.
+  * debian/watch: use uscan version 4.
+
+  [ Debian Janitor ]
+  * Set fields Upstream-Name, Upstream-Contact in debian/copyright.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+  * Update standards version to 4.4.1, no changes needed.
+  * Update standards version to 4.5.0, no changes needed.
+  * Apply multi-arch hints.
+    + libcairo-gobject-perl: Add Multi-Arch: same.
+
+  [ gregor herrmann ]
+  * Drop libextutils-*-perl from Depends.
+    These modules are only needed at build time.
+    Thanks to Alexander Traud for the bug report. (Closes: #996941)
+  * Update debian/upstream/metadata.
+  * Declare compliance with Debian Policy 4.6.0.
+  * Set Rules-Requires-Root: no.
+  * Bump debhelper-compat to 13.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 25 Oct 2021 20:36:44 +0200
+
+libcairo-gobject-perl (1.005-2) unstable; urgency=medium
+
+  * Override the library-not-linked-against-libc Lintian false positive
+    (Closes: #940517).
+    Thanks to Niko Tyni <ntyni@debian.org> for investigating.
+
+ -- intrigeri <intrigeri@debian.org>  Tue, 17 Sep 2019 07:30:25 +0000
+
+libcairo-gobject-perl (1.005-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop patch that was applied upstream.
+  * Bump dephelper compat level to 12.
+  * Declare compliance with policy 4.4.0.
+  * Reformat debian/control with "dh-make-perl refresh".
+
+ -- intrigeri <intrigeri@debian.org>  Mon, 16 Sep 2019 14:58:32 +0000
+
+libcairo-gobject-perl (1.004-3) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ intrigeri ]
+  * Bump debhelper compatibility level to 11.
+  * Declare compliance with Debian Policy 4.2.1.
+  * Adjust to renamed Lintian tag.
+  * Update upstream VCS links.
+  * New patch: Fix-typo-registed-in-comment.patch.
+
+ -- intrigeri <intrigeri@debian.org>  Mon, 29 Oct 2018 11:46:46 +0000
+
+libcairo-gobject-perl (1.004-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Axel Beckert ]
+  * Deobfuscate e-mail addresses in debian/upstream/metadata to please
+    DUCK.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * Clean up (build) dependencies. Drop perl-modules, and remove unneeded
+    version constraints.
+  * Declare compliance with Debian Policy 3.9.8.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 16 Apr 2016 16:41:17 +0200
+
+libcairo-gobject-perl (1.004-1) unstable; urgency=medium
+
+  [ intrigeri ]
+  * New upstream release.
+  * Mark package as autopkgtest-able.
+  * Declare compliance with Standards-Version 3.9.6.
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+ -- intrigeri <intrigeri@debian.org>  Sat, 23 May 2015 17:46:53 +0200
+
+libcairo-gobject-perl (1.003-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ intrigeri ]
+  * New upstream release.
+  * Declare compliance with Standards-Version 3.9.5.
+  * Add a Lintian override for debian-watch-may-check-gpg-signature.
+    Upstream does not provide detached signatures, but they sign Git tags,
+    and we (well, at least I) verify it and compare to the imported tarball
+    content before uploading to Debian.
+  * Enable all hardening build flags.
+  * Build-depend on debhelper (>= 9.20120312~) to get better hardening
+    flags support.
+
+ -- intrigeri <intrigeri@debian.org>  Wed, 08 Jan 2014 16:05:00 +0100
+
+libcairo-gobject-perl (1.001-1) unstable; urgency=low
+
+  * Initial Release (Closes: #661600).
+  * New patch: Fix-Perl-interpreter-path-in-examples.patch
+    (Debian-specific).
+
+ -- intrigeri <intrigeri@debian.org>  Tue, 28 Feb 2012 00:48:13 +0100

@@ -1,0 +1,30 @@
+From: intrigeri <intrigeri@boum.org>
+Date: Tue, 28 Feb 2012 00:48:45 +0100
+Subject: Fix Perl interpreter path in examples.
+Forwarded: not-needed
+
+---
+ examples/draw-widget.pl       |    2 +-
+ examples/gst-cairo-overlay.pl |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/examples/draw-widget.pl b/examples/draw-widget.pl
+index a0d9b54..11626a7 100644
+--- a/examples/draw-widget.pl
++++ b/examples/draw-widget.pl
+@@ -1,4 +1,4 @@
+-#!perl
++#!/usr/bin/perl
+ use Cairo::GObject;
+ use Glib::Object::Introspection;
+ 
+diff --git a/examples/gst-cairo-overlay.pl b/examples/gst-cairo-overlay.pl
+index a0e52c4..40222ff 100644
+--- a/examples/gst-cairo-overlay.pl
++++ b/examples/gst-cairo-overlay.pl
+@@ -1,4 +1,4 @@
+-#!perl
++#!/usr/bin/perl
+ 
+ # This is a Perl port written by g.schlmm at googlemail dot com of the
+ # cairo_overlay.c example found at
